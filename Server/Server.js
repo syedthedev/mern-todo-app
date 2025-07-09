@@ -14,7 +14,8 @@ mongoose.connect(`${process.env.MONGODB_URL}/mern-todo`)
         .catch(() => console.log('Database Not Connected'));
 
 // Cors
-app.use(cors({ origin : ["https://mern-todo-frontend-app.netlify.app","http://localhost:5173"]}));
+const allowedOrigins = ["https://mern-todo-app-frontend.netlify.app","http://localhost:5173"];
+app.use(cors({ origin : allowedOrigins}));
 
 // Body-Parser
 app.use(express.json());
