@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #153677, #4e085f);
+}
+
+.todo-app {
+  width: 500px;
+  max-width: 100%;
+  margin: 20px;
+  padding: 40px 30px 60px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.todo-app h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.row {
+  margin-top: 30px;
+  display: flex;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #edeef0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.row input {
+  flex: 1;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  background-color: transparent;
+  min-width: 0;
+}
+
+.row button {
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background-color: #ff5945;
+  flex-shrink: 0;
+}
+
+.row button:hover {
+  opacity: 0.85;
+}
+
+.todo-data ul {
+  margin-top: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.todo-data ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  gap: 10px;
+  flex-wrap: wrap;
+  word-break: break-word;
+}
+
+li span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.btn {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.btn button {
+  border: none;
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 6px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+
+#pen {
+  background-color: rgb(255, 200, 21);
+}
+
+#trash {
+  background-color: red;
+}
+
+#tick {
+  background-color: #4caf50;
+}
+
+#cancel {
+  background-color: #f44336;
+}
+
+/* Edit Mode */
+.edit-mode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 2px solid #4e085f;
+  background-color: #f9f9f9;
+  color: #333;
+  min-width: 0;
+}
+
+.info-tag {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#img-tag {
+  width: 120px;
+  opacity: 0.8;
+}
+
+#p-tag {
+  font-size: 0.95rem;
+  margin-top: 10px;
+  padding: 0 15px;
+  color: #333;
+}
+
+/* ✅ Responsive Fix */
+@media (max-width: 600px) {
+  .todo-app {
+    padding: 30px 20px 50px;
+  }
+
+  .row input {
+    font-size: 1rem;
+  }
+
+  .row button {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+
+  .todo-data ul li {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .edit-mode {
+    flex-wrap: nowrap;
+  }
+
+  .edit-input {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  .btn button {
+    font-size: 0.8rem;
+    padding: 6px 8px;
+    width: auto;
+  }
+
+  li span {
+    font-size: 0.95rem;
+    gap: 8px;
+  }
+
+  #img-tag {
+    width: 100px;
+  }
+
+  #p-tag {
+    font-size: 0.85rem;
+  }
+}
